@@ -1,7 +1,7 @@
  var controller = new ScrollMagic.Controller({
  	globalSceneOptions: {duration: 1600}
  }); 
-
+ setTimeout(()=>{updateAlert();}, 1500);
 new ScrollMagic.Scene({
 	triggerElement: "#head1",
 	triggerHook: 1,
@@ -23,6 +23,7 @@ new ScrollMagic.Scene({
 	.on('progress', function(event){
 		if (event.progress > 0.05){
 			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
+			
 		}
 	});
 
@@ -54,12 +55,16 @@ function lightOrDark(color) {
 function setHeaderMode(mode) {
 	if (mode == "dark"){
 		for (var i=0; i < (document.querySelectorAll('a').length); i++){
-			(document.querySelectorAll('a')[i]).style.color = "white";
+			(document.querySelectorAll('a')[i]).style.color = "rgb(235, 223, 188)";
 		}
 		 
 	} else if (mode =="light"){
 		for (var i=0; i < (document.querySelectorAll('a').length); i++){
-			(document.querySelectorAll('a')[i]).style.color = "black";
+			(document.querySelectorAll('a')[i]).style.color = "#333447";
 		}
 	}
+}
+
+function updateAlert(){
+	alert("Reminder: This information is NOT up to date. The website will be up to date on Tuesday (an email reminder will be sent out then)!");
 }
