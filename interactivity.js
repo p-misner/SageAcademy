@@ -1,11 +1,11 @@
  var controller = new ScrollMagic.Controller({
- 	globalSceneOptions: {duration: 1200}
+ 	globalSceneOptions: {duration: 1600}
  }); 
 
 new ScrollMagic.Scene({
 	triggerElement: "#head1",
 	triggerHook: 1,
-})
+	})
 	.setClassToggle("body","floralwhite")
 	.addTo(controller)
 	.on('progress', function(event){
@@ -17,7 +17,7 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: "#head2",
 	triggerHook: 0.8,
-})
+	})
 	.setClassToggle("body","blue")
 	.addTo(controller)
 	.on('progress', function(event){
@@ -26,18 +26,6 @@ new ScrollMagic.Scene({
 		}
 	});
 
-new ScrollMagic.Scene({
-	triggerElement: "#head3",
-	triggerHook: 0.8,
-
-})
-	.setClassToggle("body","red")
-	.addTo(controller)
-	.on('progress', function(event){
-		if (event.progress > 0.05 ){
-			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
-		}	
-	});
 
 
 
@@ -74,10 +62,4 @@ function setHeaderMode(mode) {
 			(document.querySelectorAll('a')[i]).style.color = "black";
 		}
 	}
-
-
-}
-
-function alertFunc() {
-	alert("alert")
 }
