@@ -1,7 +1,7 @@
  var controller = new ScrollMagic.Controller({
  	globalSceneOptions: {duration: 1600}
  }); 
- setTimeout(()=>{updateAlert();}, 1500);
+
 new ScrollMagic.Scene({
 	triggerElement: "#head1",
 	triggerHook: 1,
