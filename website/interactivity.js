@@ -72,6 +72,4 @@ function setHeaderMode(mode) {
 	}
 }
 
-function updateAlert(){
-	alert("Reminder: This information is NOT up to date. The website will be up to date on Tuesday (an email reminder will be sent out then)!");
-}
+
