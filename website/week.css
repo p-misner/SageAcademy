@@ -50,6 +50,41 @@ li {
     margin-left: -40px;
     padding-left: 0px;
 }
+.title h2 {
+    margin-top: 100px;
+}
+
+.nav {
+    font-family: 'Mosk', sans-serif;
+    font-weight: 600;
+    top: 20px;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+}
+
+.nav a {
+    z-index: 10;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: left;
+    color: #333447;
+    text-align: center;
+    padding: 14px 16px;
+    margin-right: 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav a:hover {
+    opacity: 0.8;
+}
+
+.nav-right a {
+    float:right;
+}
+
 .spacer {
     /*background-color: white;*/
     height: 400px;
