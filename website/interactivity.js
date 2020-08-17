@@ -27,6 +27,13 @@ new ScrollMagic.Scene({
 		}
 	});
 
+new ScrollMagic.Scene({
+	triggerElement: "#head3",
+	triggerHook: 0.8,
+	})
+	.setClassToggle("body","cream")
+	.addTo(controller);
+
 
 
 

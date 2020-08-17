@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(214, 222, 209);
+	background-color: white;
 	font-family: Helvetica;
 }
 h1 {
@@ -11,8 +11,15 @@ h1 {
 .hero {
 	text-align: center;
 	letter-spacing: 3px;
+	height: 90vh;
+	color: rgb(84, 92, 4);
+}
+.hero h1 {
+	color: rgb(84, 92, 4);
+	font-size: 4em;
 }
 .hero h2 {
+	color: rgb(84, 92, 4);
 	font-weight: 200;
 	font-family: 'Mosk', sans-serif;
 }
@@ -28,10 +35,6 @@ svg {
 	/*background-color: yellow;*/
 }
 
-.hero {
-	height: 90vh;
-	color: rgb(84, 92, 4);
-}
 
 .img {
 	width: 500px;
@@ -40,16 +43,11 @@ svg {
 	background-repeat: no-repeat;
 	background-position: center; 
 }
-.heroimg {
-	opacity: 0.4;
-	background-image: url("./images/hero.jpg");
-	position: relative;
-	top: -300px;
-	left: 200px;
-	z-index: -1;
+
+#navbar {
+		/*visibility: hidden;*/
 
 }
-
 .nav {
 	font-family: 'Mosk', sans-serif;
 	font-weight: 600;
@@ -60,10 +58,12 @@ svg {
 }
 
 .nav a {
+	z-index: 10;
+	cursor: pointer;
 	text-transform: uppercase;
 	font-weight: 700;
 	float: left;
-	color: black;
+	color: #333447;
 	text-align: center;
 	padding: 14px 16px;
 	margin-right: 25px;
@@ -80,7 +80,13 @@ svg {
 }
 
 
-
+.week {
+	z-index: -1;
+}
+.week span {
+	height:80px;
+	display: inline-block;
+}
 .week h1 {
 	margin-top: 0px;
 }
@@ -102,12 +108,20 @@ svg {
 	padding-left: 0px;
 }
 
+.activity  {
+		/*text-decoration: underline 2px;
+		text-underline-offset: 5px; */
+
+}
+#week1 * {
+
+}
 #week2 * {
 	color: rgb(235, 223, 188);
 }
 
 #week3 * {
-	color: rgb(68, 133, 72);
+	color: rgb(145, 13, 24);
 }
 .spacer {
 	/*background-color: white;*/
@@ -115,7 +129,7 @@ svg {
 }
 
 .floralwhite{
-	background-color: rgb(123, 156, 130);
+	background-color: rgb(211, 235, 212);
 	transition: all 1.5s ease-in-out;
 }
 
@@ -129,51 +143,33 @@ svg {
 	background-color: rgb(37, 71, 99);
 	transition: all 1s ease-in-out;
 }
+
+.cream {
+	background-color: rgb(235, 229, 211);
+	transition: all 1s ease-in-out;
+}
 .white {
 	color: white;
 }
 
 
-
-
-
-
-
-
-
 @font-face {
     font-family: 'Mosk';
-    src: url('./fonts/mosk_extra-light_200-webfont.woff') format('woff');
+    src: url('../fonts/mosk_extra-light_200-webfont.woff') format('woff');
     font-weight: 200;
     font-style: normal;
-
 }
-
-
-
-
-
-
-
-
 
 @font-face {
     font-family: 'Mosk';
-    src: url('./fonts/mosk_semi-bold_600-webfont.woff') format('woff');
+    src: url('../fonts/mosk_semi-bold_600-webfont.woff') format('woff');
     font-weight: 600;
     font-style: normal;
-
 }
-
-
-
-
-
 
 @font-face {
     font-family: 'Mosk';
-    src:  url('./fonts/mosk_ultra-bold_900-webfont.woff') format('woff');
+    src:  url('../fonts/mosk_ultra-bold_900-webfont.woff') format('woff');
     font-weight: 900;
     font-style: normal;
-
 }
