@@ -1,0 +1,8 @@
+# Basics
+.DS_Store
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite

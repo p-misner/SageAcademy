@@ -101,7 +101,7 @@ p {
 
 .row {
   position: relative;
-  width: 100%;
+  width: 110%;
 }
 
 .row [class^="col"] {

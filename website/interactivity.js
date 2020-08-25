@@ -1,12 +1,12 @@
  var controller = new ScrollMagic.Controller({
- 	globalSceneOptions: {duration: 1600}
+ 	globalSceneOptions: {duration: 3000}
  }); 
 
 new ScrollMagic.Scene({
 	triggerElement: "#head1",
 	triggerHook: 1,
 	})
-	.setClassToggle("body","floralwhite")
+	.setClassToggle("body","lightgreen")
 	.addTo(controller)
 	.on('progress', function(event){
 		if (event.progress > 0.05){

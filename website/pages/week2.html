@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Sage Academy</title>
+	
+	<link rel="stylesheet" href="../simple-grid.css">
+	<link rel="stylesheet" href="../week.css ">
+</head>
+<body>
+	<div  class="nav">
+		<a href="../../index.html"> Sage Academy</a>
+		<!-- <div class ="nav-right">
+			<a href="#week2"> Week 2</a>
+			<a  href="#week1"> Week 1</a>
+		</div> -->
+
+	</div>
+	<div id="week2" class="content">
+		<div class="title">
+			<h2> week 2 </h2>
+			<h1> Social Distancing </h1>
+		</div>
+
+
+
+
+
+
+		<div class="overview">
+			<div class="row">
+				<div class="col-5">
+					<h4> Materials </h4>
+					<ul>
+						<li> Laptop + Charger </li>
+						<li> Masks + Latex Gloves </li>
+						<li> Notebook </li> 
+						<li> Pens/ Pencils  </li>
+						<li> Elegoo Uno Super Kit </li>
+					</ul>
+				</div>
+				<div class="col-7" >
+					<h4 class="activity"> Goals </h4>
+					<p> Lorem ipsum dolor sit amet, consector elegir stuff whatever.  </p>
+				</div>
+			</div>
+		</div>
+		<button class="collapsible"> <h6>6th Grade</h6></button>
+		<div class="coll_content">
+		 <div class="proj">
+			<h3>Earthquakes + Spaghetti Towers</h3>
+			<h6> Question </h6>
+			<p> How does the shapes used in a structure impact how it holds up during an earthquake? What variables should we test to figure this out? </p>
+			<div class="row">
+				<div class="col-3">
+					<h5>Round 1</h5>
+				</div>
+				<div class="col-9">
+					<p> Each person should choose one variable and build a test structure based on that variable</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<h5>Discussion</h5>
+				</div>
+				<div class="col-9">
+					<p> What did we learn from these tests? What features seem to strengthen the strucutre? Are there any tradeoffs</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<h5> Round 2</h5>
+				</div>
+				<div class="col-9">
+					<p> Based on what we learned, everyone gets a second change to build the tallest structure that can withstand a earthquake. </p>
+				</div>
+			</div>
+			<h6> Documentation </h6>
+			<p> Open up a google doc and share it with priyamisner@gmail.com </p>
+			<p> Upload the pictures of your structures and blueprint drawings to the drive. Write three sentences about:  </p>
+			<ul>
+				<li> What you learned from the first round of testing</li>
+				<li>  Why did you design the structure the way you did? </li>
+				<li> One thing you liked about someone else's structure design</li>
+			</ul>
+			
+			</div>
+			<div class="proj">
+				<h3> Circuit Review </h3>
+				<h6> Materials</h6>
+				<p> Just like in last class, we will be using our 9V battery to light up LEDs and learn the basics of circuits. You will need:</p>
+				<ul>
+					<li> 9 volt battery</li>
+					<li> 9V battery connector (not in kit - will be handed out)</li>
+					<li> 4 LEDS of the same color</li>
+					<li> multiple 10kΩ resistors</li>
+					<li> Breadboard</li>
+				</ul>
+				<h6> Basic LED Circuit </h6>
+				<div id="led-circuit" class="img"></div>
+				<p> Let's try building a circuit like the picture above. Why do we need the resistor? What do the different lengths of wire on the LED mean? How should we go about adding more LEDs? What if I wanted to turn an LED off - how would I do that?</p>
+			</div>
+			<div class="proj">
+				<h3>Social Distancing Headbands</h3>
+				<h6> Goals </h6>
+				<p> Over the next two weeks, we will be creating headbands that can alert you when something is within 6ft of you. Today, we will be designing prototypes of the headband and brainstorming ways we can connect the sensor and Arduino to our heads.  </p>
+
+			<div class="spacerhalf"></div>
+
+		</div>
+		</div>
+		<button class="collapsible"><h6>8th Grade</h6></button>
+		<div class="coll_content">
+		  <p> BEING UPDATE NOW</p>
+		</div>
+		
+		
+
+
+		<div class="spacer"></div>
+
+		
+	</div>
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
+</body>
+</html>

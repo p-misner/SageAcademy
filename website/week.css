@@ -9,8 +9,16 @@ body {
     margin: 0 auto;
 }
 
-h1,h2,h3 {
+#week1 h1,#week1 h2,#week1 h3 {
     color: rgb(84, 125, 92);
+}
+#week2 h1,#week2 h2,#week2 h3 {
+    color: rgb(30, 92, 143);
+}
+
+
+#week3 h1,#week3 h2,#week3 h3 {
+    color: rgb(145, 13, 24);
 }
 
 h1 {
@@ -53,6 +61,10 @@ li {
 .title h2 {
     margin-top: 100px;
 }
+button h6 {
+    color: white;
+    font-size: 2em;
+}
 
 .nav {
     font-family: 'Mosk', sans-serif;
@@ -88,6 +100,10 @@ li {
 .spacer {
     /*background-color: white;*/
     height: 400px;
+}
+.spacerhalf {
+    /*background-color: white;*/
+    height: 100px;
 }
 .proj p, .proj h5 {
     margin-top: 0px;
@@ -153,6 +169,35 @@ a {
     padding: 1px 3px;
     font-style: normal;
 }
+
+
+.collapsible {
+    margin: 10px 0;
+  background-color: rgb(30, 92, 143);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(15, 53, 84);
+}
+
+.coll_content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(242, 248, 252);
+}
+
+
+
 @font-face {
     font-family: 'Mosk';
     src: url('../fonts/mosk_extra-light_200-webfont.woff') format('woff');

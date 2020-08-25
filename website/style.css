@@ -23,6 +23,17 @@ h1 {
 	font-weight: 200;
 	font-family: 'Mosk', sans-serif;
 }
+
+.grade {
+	font-size: 1.5em;
+	font-weight: 900;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.eighth p, .eighth h4 {
+	margin-left: 10px;
+
+}
 svg {
 	fill: black;
 }
@@ -125,12 +136,20 @@ svg {
 	height: 400px;
 }
 
-.floralwhite{
+button {
+	background-color: none;
+	border:rgb(235, 223, 188) ;
+	padding: 15px 32px;
+	cursor: pointer;
+
+}
+
+.lightgreen{
 	background-color: rgb(211, 235, 212);
 	transition: all 1.5s ease-in-out;
 }
 
-.red {
+.brown {
 	background-color: rgb(74, 46, 13);
 	transition: all 1s ease-in-out;
 
@@ -148,6 +167,9 @@ svg {
 .white {
 	color: white;
 }
+
+
+
 
 
 @font-face {
