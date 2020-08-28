@@ -162,6 +162,12 @@ a {
 #arduino-led-button{
     background-image: url("./images/arduino-led-button.png");
 }
+#tinkercad_login{
+    background-image: url("./images/tinkercad_login.png");
+}
+#tinkercad_blocktext {
+    background-image: url("./images/tinkercad_blocktext.png");
+}
 .term {
     font-family: 'Consolas',monospace;
     background-color: rgb(235, 235, 235);
