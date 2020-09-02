@@ -21,7 +21,8 @@
 // defines pins numbers
 const int trigPin = 12;
 const int echoPin = 11;
-const int led = 9;
+const int led = 3;
+
 
 // defines variables
 long duration;
@@ -32,7 +33,7 @@ void setup() {
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
   pinMode(led, OUTPUT); 
   Serial.begin(9600); // Starts the serial communication
-  Serial.println("----- start -----")
+  Serial.println("----- start -----");
 }
 void loop() {
   // Clears the trigPin
@@ -55,13 +56,13 @@ void loop() {
   if (distance/2.54 < 12){
     Serial.print(distance/2.54);
     Serial.println(" inches");
-    digitalWrite(led,HIGH);
+     tone(led, 1000);
      
   }
   else {
     Serial.print(distance/(2.54*12));
     Serial.println(" ft");
-    digitalWrite(led,LOW);
+    noTone(led);
   }
   
  
