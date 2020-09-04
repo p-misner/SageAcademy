@@ -142,6 +142,9 @@ a {
     background-position: center;
 
 }
+.bigimg {
+    height: 500px;
+}
 
 #ac_homepage {
     background-image: url("./images/ac_homepage.png");
@@ -168,6 +171,31 @@ a {
 #tinkercad_blocktext {
     background-image: url("./images/tinkercad_blocktext.png");
 }
+#headband_electronics {
+    background-image: url("./images/headband_electronics.png");
+}
+#headband_circuit {
+    background-image: url("./images/headband_circuit.png");
+}
+#handcrank {
+    background-image: url("https://cdn.thisiswhyimbroke.com/images/giphoscope.gif");
+}
+#zoetrope {
+    background-image: url("https://thumbs.gfycat.com/DisfiguredGreedyAndeancat-size_restricted.gif");
+}
+#bananapiano {
+    background-image: url("https://cdn.shopify.com/s/files/1/0162/8612/files/underImage_2400x.jpg?v=1548873305");
+}
+#fruitpiano {
+    background-image: url("https://im6.ezgif.com/tmp/ezgif-6-50e6618c37d8.gif");
+}
+#cardboardarm {
+    background-image: url("https://i.pinimg.com/originals/d9/89/84/d98984e920be5b685be08b81d90877ec.jpg");
+}
+#teachablemachine {
+    background-image: url(https://teachablemachine.withgoogle.com/assets/img/contentpage/home/2017-version.jpg);
+}
+
 .term {
     font-family: 'Consolas',monospace;
     background-color: rgb(235, 235, 235);

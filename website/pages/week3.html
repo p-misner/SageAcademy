@@ -7,7 +7,11 @@
 	<title>Sage Academy</title>
 	
 	<link rel="stylesheet" href="../simple-grid.css">
+	<link href="./prism.css" rel="stylesheet" />
 	<link rel="stylesheet" href="../week.css ">
+
+
+
 </head>
 <body>
 	<div  class="nav">
@@ -64,20 +68,155 @@
 		</div>
 		<div class="proj">
 			<h3>Social Distancing Headband</h3>
-			<h6> some instructions </h6>
+			<h6> Design Requirements </h6>
+			<p>The social distancing headband must:</p>
+			<ul>
+				<li>Comfortably and firmly sit on the user's head</li>
+				<li> Position the ultrasonic sensor so that it can sense approaching obstacles </li>
+				<li> Hold the Arduino + battery so that they can attach via wire to the ultrasonic sensor </li>
+				<li> Position the speaker so that the user can hear the warning sound</li>
+			</ul>
+
+			<h6>Necessary Electronics</h6>
+			<div id="headband_electronics" class="img"></div>
 			<p>
-				<a href="https://archive.manylabs.org/docs/project/windTurbine/">Wind Turbine Link</a>
+			To complete the project, each student will use 1 ultrasonic sensor, 1 piezo buzzer, 1 9V battery, 1 Arduino and 1 9V battery to Arduino connector. A max of 3ft of wire will connect the ultrasonic sensor to the Arduino
 			</p>
+			<h6> Extra Supplies</h6>
+			<p>Outside of the electronics, you will also have access to fabric, a sewing machine, needle and thread, cardboard, tape, string, paper, beads and paint. </p>
+			<h6> Circuit and Code </h6>
+			<p>The circuit for the headband electronics is shown in the diagram  and the connections are also listed below. Connect all the different components to the exact pins listed in the diagram. The code to run on the Arduino is shown below and is also available <a href="https://github.com/p-misner/SageAcademy/blob/master/week3_SocialDistancingHeadband/headband.ino">here on github</a></p>
+			<div id="headband_circuit" class="img bigimg"></div>
+			<div class="row">
+				<div class="col-3"><h5> Ultrasonic Sensor Connections</h5></div>
+				<div class="col-9">
+					<p>1. Connect the VCC pin on the Ultrasonic Sensor to the 5V pin on the Arduino</p>
+					<p>2. Connect GND pin on the Ultrasonic Sensor to a GND pin on the Arduino</p>
+					<p>3. Connect the ECHO pin on the Ultrasonic Sensor to pin 11 on the Arduino</p>
+					<p>4. Connect the TRIG pin on the Ultrasonic Sensor to pin 12 on the Arduino</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3"><h5> Buzzer Connections</h5></div>
+				<div class="col-9">
+					<p>1. Connect the one pin on the Piezzo Buzzer to a GND pin on the Arduino</p>
+					<p>2. Connect one pin on the Piezzo Buzzer to pin 3 on the Arduino</p>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<h5>Code</h5>
+				</div>
+				<div class="col-9">
+					<pre class="language-clike"><code>
+/* Ultrasonic Sensor HC-SR04 and Arduino Tutorial
+    * Modified version from Dejan Nedelkovski,
+    * www.HowToMechatronics.com
+    * By Priya Misner
+    
+    Wiring:
+    1. Arduino Ground to Ultrasonic Ground
+    2. Pin 11 to Ultrasonic Echo
+    3. Pin 12 to Ultrasonic Trigger
+    4. Arduino 5V to Ultrasonic VCC
+*/
+
+// defines pins numbers
+const int trigPin = 12;
+const int echoPin = 11;
+const int buzzer = 3;
+
+
+// defines variables
+long duration;
+int distance;
+
+void setup() {
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+  pinMode(buzzer, OUTPUT); 
+  Serial.begin(9600); // Starts the serial communication
+  Serial.println("----- start -----");
+}
+void loop() {
+  // Clears the trigPin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+ 
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+ 
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration = pulseIn(echoPin, HIGH);
+  
+  // Calculating the distance in cm
+  distance= duration*0.034/2;
+  
+  // Prints the distance on the Serial Monitor
+  Serial.print("Distance: ");
+  if (distance/2.54 < 12){
+    Serial.print(distance/2.54);
+    Serial.println(" inches");
+     tone(buzzer, 1000);  
+  }
+  else {
+    Serial.print(distance/(2.54*12));
+    Serial.println(" ft");
+    noTone(buzzer);
+  }
+  delay(500);
+}
+					</code></pre>
+
+
+				</div>
+			</div>
+
+			<h6>Documentation</h6>
+			<p>Remember to take photos thorughout the build process! We will be creating a short write-up for your portfolios at the end of this project.</p> 
+			
 			
 		</div>
 		<div class="proj">
-			<h3> Zoetropes - two types </h3>
+			<h3> Future Project Ideas </h3>
+			<h6> Mechanical Gifs</h6>
+			<div class="row">
+				<div class="col-6">
+					<div id="handcrank" class="img"></div>
+				</div>
+				<div class="col-6">
+					<div id="zoetrope" class="img"></div>
+				</div>
+			</div>
+			<h6> Fruit Piano </h6>
+			<div class="row">
+				<div class="col-6">
+					<div id="bananapiano" class="img"></div>
+				</div>
+				<div class="col-6">
+					<div id="fruitpiano" class="img"></div>
+				</div>
+			</div>
+			<h6> Hand Controlled Robotic Arm</h6>
+			<div class="row">
+				<div class="col-6">
+					<div id="cardboardarm" class="img"></div>
+				</div>
+				<div class="col-6">
+					<div id="teachablemachine" class="img"></div>
+				</div>
+			</div>
+			
 		</div>
+
 
 		<div class="spacer"></div>
 
-		
-	</div>
 	
+	</div>
+	<script src="./prism.js"></script>
 </body>
 </html>
