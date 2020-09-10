@@ -53,7 +53,7 @@ void loop() {
   
   // Prints the distance on the Serial Monitor
   Serial.print("Distance: ");
-  if (distance/2.54 < 12){
+  if (distance/2.54 < 24){
     Serial.print(distance/2.54);
     Serial.println(" inches");
      tone(buzzer, 1000);
