@@ -12,6 +12,10 @@
     2. Pin 11 to Ultrasonic Echo
     3. Pin 12 to Ultrasonic Trigger
     4. Arduino 5V to Ultrasonic VCC
+
+
+
+
   */
 
 // defines pins numbers
@@ -23,6 +27,7 @@ const int buzzer = 3;
 // defines variables
 long duration;
 int distance;
+int beepDistance = 2;
 
 void setup() {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
@@ -49,18 +54,15 @@ void loop() {
   
   // Prints the distance on the Serial Monitor
   Serial.print("Distance: ");
-  if (distance/2.54 < 12){
-    Serial.print(distance/2.54);
-    Serial.println(" inches");
-     tone(buzzer, 1000);
-     
+  Serial.print(distance/(2.54*12));
+  Serial.println(" ft");
+  if (distance/(2.54*12) < beepDistance){
+    tone(buzzer, 600);  
   }
   else {
-    Serial.print(distance/(2.54*12));
-    Serial.println(" ft");
+
     noTone(buzzer);
   }
   
- 
-  delay(500);
+  delay(100);
 }
