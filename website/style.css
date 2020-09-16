@@ -23,7 +23,6 @@ h1 {
 	font-weight: 200;
 	font-family: 'Mosk', sans-serif;
 }
-
 .grade {
 	font-size: 1.5em;
 	font-weight: 900;
@@ -32,12 +31,10 @@ h1 {
 }
 .eighth p, .eighth h4 {
 	margin-left: 10px;
-
 }
 svg {
 	fill: black;
 }
-
 .content {
 	min-width: 300px;
 	max-width: 1200px;
@@ -45,8 +42,6 @@ svg {
 	margin: 0 auto;
 	/*background-color: yellow;*/
 }
-
-
 .img {
 	width: 500px;
 	height: 300px;
@@ -54,8 +49,6 @@ svg {
 	background-repeat: no-repeat;
 	background-position: center; 
 }
-
-
 .nav {
 	font-family: 'Mosk', sans-serif;
 	font-weight: 600;
@@ -64,7 +57,6 @@ svg {
 	position: fixed;
 	width: 100vw;
 }
-
 .nav a {
 	z-index: 10;
 	cursor: pointer;
@@ -78,16 +70,12 @@ svg {
 	text-decoration: none;
 	font-size: 17px;
 }
-
 .nav a:hover {
 	opacity: 0.8;
 }
-
 .nav-right a {
 	float:right;
 }
-
-
 .week {
 	z-index: -1;
 }
@@ -119,7 +107,6 @@ svg {
 .activity  {
 		/*text-decoration: underline 2px;
 		text-underline-offset: 5px; */
-
 }
 #week1 * {
 
@@ -131,11 +118,12 @@ svg {
 #week3 * {
 	color: rgb(145, 13, 24);
 }
+#week5 * {
+	color: rgb(37, 71, 99);
+}
 .spacer {
-	/*background-color: white;*/
 	height: 400px;
 }
-
 button {
 	background-color: none;
 	border:rgb(235, 223, 188) ;
@@ -143,8 +131,12 @@ button {
 	cursor: pointer;
 
 }
+/***
 
-.lightgreen{
+COLORS FOR BODY BACKGROUND CHANGE
+
+***/
+.one{
 	background-color: rgb(211, 235, 212);
 	transition: all 1.5s ease-in-out;
 }
@@ -152,20 +144,19 @@ button {
 .brown {
 	background-color: rgb(74, 46, 13);
 	transition: all 1s ease-in-out;
-
 }
 
-.blue {
+.two {
 	background-color: rgb(37, 71, 99);
 	transition: all 1s ease-in-out;
 }
 
-.cream {
+.three {
 	background-color: rgb(235, 229, 211);
 	transition: all 1s ease-in-out;
 }
-.white {
-	color: white;
+.five {
+	background-color: rgb(252, 217, 240);
 }
 
 

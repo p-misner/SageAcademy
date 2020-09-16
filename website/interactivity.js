@@ -6,7 +6,7 @@ new ScrollMagic.Scene({
 	triggerElement: "#head1",
 	triggerHook: 1,
 	})
-	.setClassToggle("body","lightgreen")
+	.setClassToggle("body","one")
 	.addTo(controller)
 	.on('progress', function(event){
 		if (event.progress > 0.05){
@@ -18,7 +18,7 @@ new ScrollMagic.Scene({
 	triggerElement: "#head2",
 	triggerHook: 0.8,
 	})
-	.setClassToggle("body","blue")
+	.setClassToggle("body","two")
 	.addTo(controller)
 	.on('progress', function(event){
 		if (event.progress > 0.05){
@@ -31,8 +31,27 @@ new ScrollMagic.Scene({
 	triggerElement: "#head3",
 	triggerHook: 0.8,
 	})
-	.setClassToggle("body","cream")
-	.addTo(controller);
+	.setClassToggle("body","three")
+	.addTo(controller)
+	.on('progress', function(event){
+		if (event.progress > 0.05){
+			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
+			
+		}
+	});
+
+new ScrollMagic.Scene({
+	triggerElement: "#head5",
+	triggerHook: 0.8,
+	})
+	.setClassToggle("body","five")
+	.addTo(controller)
+	.on('progress', function(event){
+		if (event.progress > 0.05){
+			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
+			
+		}
+	});
 
 
 

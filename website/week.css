@@ -21,6 +21,18 @@ body {
     color: rgb(145, 13, 24);
 }
 
+#week5 h1,#week5 h2,#week5 h3, #week5  {
+     color: rgb(250, 185, 228);
+
+}
+
+#week5 .collapsible {
+    background-color: rgb(222, 133, 192)
+}
+#week5 .collapsible:hover {
+    background-color: rgb(250, 185, 228)
+}
+
 h1 {
     font-size: 4em;
     font-weight: 900;
@@ -133,6 +145,14 @@ a {
     margin-top: 10px;
 }
 
+.vid iframe {
+    width: 75%;
+    height: auto;
+    min-height: 300px;
+    min-width: 100px;
+    max-width: 600px;
+    margin: 0 auto;
+}
 .img {
     /*background-color: rgb(84, 110, 58);*/
     width: 100%;
@@ -168,6 +188,9 @@ a {
 #tinkercad_login{
     background-image: url("./images/tinkercad_login.png");
 }
+#tinkercad_3D{
+    background-image: url("./images/tinkercad_3D.png");
+}
 #tinkercad_blocktext {
     background-image: url("./images/tinkercad_blocktext.png");
 }
@@ -194,6 +217,12 @@ a {
 }
 #teachablemachine {
     background-image: url(https://teachablemachine.withgoogle.com/assets/img/contentpage/home/2017-version.jpg);
+}
+#rubberbandrocket{
+    background-image: url("./images/rubberbandrocket.png");
+}
+#earringexamples{
+    background-image: url("./images/earringexamples.jpg");
 }
 
 .term {
