@@ -66,6 +66,16 @@ ul {
     list-style:  none;
 
 }
+.disc {
+    list-style: disc;
+}
+.disc li {
+    margin-left: 0px;
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 1.3;
+
+}
 li {
     margin-left: -40px;
     padding-left: 0px;
