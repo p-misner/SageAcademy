@@ -25,13 +25,25 @@ body {
      color: rgb(250, 185, 228);
 
 }
-
 #week5 .collapsible {
     background-color: rgb(222, 133, 192)
 }
 #week5 .collapsible:hover {
     background-color: rgb(250, 185, 228)
 }
+
+#week7 h1,#week7 h2,#week7 h3, #week7 {
+     color: #606c38;
+
+}
+#week7 .collapsible {
+    background-color: #606c38;
+}
+#week7 .collapsible:hover {
+    background-color: #283618;
+}
+
+
 
 h1 {
     font-size: 4em;

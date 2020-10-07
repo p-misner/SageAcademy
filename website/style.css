@@ -121,6 +121,10 @@ svg {
 #week5 * {
 	color: rgb(37, 71, 99);
 }
+
+#week7 * {
+	color: #dda15e;
+}
 .spacer {
 	height: 400px;
 }
@@ -158,6 +162,11 @@ COLORS FOR BODY BACKGROUND CHANGE
 .five {
 	background-color: rgb(252, 217, 240);
 }
+
+.seven {
+	background-color: #283618;
+}
+
 
 
 

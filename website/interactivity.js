@@ -52,7 +52,19 @@ new ScrollMagic.Scene({
 			
 		}
 	});
-
+	
+new ScrollMagic.Scene({
+	triggerElement: "#head7",
+	triggerHook: 0.8,
+	})
+	.setClassToggle("body","seven")
+	.addTo(controller)
+	.on('progress', function(event){
+		if (event.progress > 0.05){
+			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
+			
+		}
+	});
 
 
 
