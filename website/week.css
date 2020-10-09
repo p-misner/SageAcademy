@@ -247,6 +247,14 @@ a {
     background-image: url("./images/earringexamples.jpg");
 }
 
+#export{
+    background-image: url("./images/export.png");
+}
+#stl{
+    background-image: url("./images/stl.png");
+}
+
+
 .term {
     font-family: 'Consolas',monospace;
     background-color: rgb(235, 235, 235);
