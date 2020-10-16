@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Sage Academy</title>
+	
+	<link rel="stylesheet" href="../simple-grid.css">
+	<link href="./prism.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../week.css ">
+
+
+
+</head>
+<body>
+	<div  class="nav">
+		<a href="../../index.html"> Sage Academy</a>
+		<!-- <div class ="nav-right">
+			<a href="#week2"> Week 2</a>
+			<a  href="#week1"> Week 1</a>
+		</div> -->
+
+	</div>
+	<div id="week8" class="content">
+		<div class="title">
+			<h2> week 8 </h2>
+			<h1> Motors </h1>
+		</div>
+		<div class="overview">
+			<div class="row">
+				<div class="col-5">
+					<h4> Materials </h4>
+					<ul>
+						<li> Laptop + Charger </li>
+						<li> Masks </li>
+						<li> Notebook </li> 
+						<li> Pens/ Pencils  </li>
+						<li> Elegoo Super Uno Kit  </li>
+					
+					</ul>
+				</div>
+				<div class="col-7" >
+					<h4 class="activity"> Goals </h4>
+					<p> Both the sixth and eighth graders are putting finishing touches on their previous projects. The 6th graders touch up their earrings while the 8th graders get to show off the cardboard games they built to their classmates. </p>
+					<p> In week eight, we will be returning to using our Arduinos. This time around, we will be using them to control motors that spin a mechanical flipbook. Students will also get to create their own animation for their flipbooks.</p>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<div class="spacerhalf"></div>
+		<button class="collapsible"><h6>6th Grade</h6></button>
+		<div class="coll_content"> 	
+			<div class="proj">
+				<h3>3D Printed Earrings</h3>
+
+				<h6>Painting Earrings</h6>
+				<p> Everyone should have working 3D printed earrings in front of them. The next hour, we will paint our earrings and get to put together some bracelets with 3D printed charms.</p>
+
+				<h6> Portfolio </h6>
+				<p> Want to print something fun for yourself for the 3D printer but can't remember the steps on how to export your file? Follow the steps below. </p>
+
+				<h3> Mechanical Flipbook</h3>
+
+
+				<h3>Coding Introduction </h3>
+				<h6> Peanut Butter and Jelly Coding</h6>
+				<h6>Materials</h6>
+<p> Priya has been transformed by aliens into a robot. They only way to save her is to help her make a perfect PB & J sandwhich by giving her step by step instructions. Will she be saved or is Priya going to be trapped as a robot forever ?!  </p>
+				<div class="row">
+					<div class="col-9">
+						<p> 
+							<ul>
+								<li> Bread </li>
+								<li> Knife </li>
+								<li>Peanut Butter</li>
+								<li>Jelly</li>
+							</ul>
+						</p>
+					</div>
+					
+				</div>
+				
+
+				<h6> Blind Obstacle Course</h6>
+				<p> Building of the skills we learned thorugh PB&J coding, we will get into groups of two. There will be two rounds of this game. One partner will be blindfolder and the other person will be guiding them through an obstacle course. Instructions must be pre-written.  </p>
+
+				<div class="spacerhalf"></div>
+				
+
+			</div>
+		</div>
+		<button class="collapsible"><h6>8th Grade</h6></button>
+		<div class="coll_content">
+			<h3> Cardboard Games</h3>
+			<h6> Finishing touches</h6>
+			<p> You have 30 minutes to put any finishing touches on your game, attach your 3D printed pieces and make sure your rule sheet is ready to go. After 30 minutes, groups of two will play all of the games and leave comments. </p>
+			
+			<h3> Mechanical Flipbook</h3>
+			
+			<div class="spacerhalf"></div>
+					
+
+
+		</div>
+				<div class="spacerhalf"></div>
+
+	</div>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.maxHeight){
+		      content.style.maxHeight = null;
+		    } else {
+		      content.style.maxHeight = content.scrollHeight + "px";
+		    } 
+		  });
+		}
+	</script>
+</body>

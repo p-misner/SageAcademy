@@ -43,6 +43,17 @@ body {
     background-color: #283618;
 }
 
+#week8 h1,#week8 h2,#week8 h3, #week8 {
+     color: #f9c74f;
+
+}
+#week8 .collapsible {
+    background-color: #f9c74f;
+}
+#week8 .collapsible:hover {
+    background-color: #ca9d00;
+}
+
 
 
 h1 {

@@ -1,5 +1,5 @@
  var controller = new ScrollMagic.Controller({
- 	globalSceneOptions: {duration: 3000}
+ 	globalSceneOptions: {duration: 3300}
  }); 
 
 new ScrollMagic.Scene({
@@ -58,6 +58,19 @@ new ScrollMagic.Scene({
 	triggerHook: 0.8,
 	})
 	.setClassToggle("body","seven")
+	.addTo(controller)
+	.on('progress', function(event){
+		if (event.progress > 0.05){
+			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
+			
+		}
+	});
+
+new ScrollMagic.Scene({
+	triggerElement: "#head8",
+	triggerHook: 0.8,
+	})
+	.setClassToggle("body","eight")
 	.addTo(controller)
 	.on('progress', function(event){
 		if (event.progress > 0.05){
