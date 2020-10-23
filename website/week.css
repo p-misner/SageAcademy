@@ -54,6 +54,17 @@ body {
     background-color: #ca9d00;
 }
 
+#week9 h1,#week9 h2,#week9 h3, #week9 {
+     color: #495867;
+
+}
+#week9 .collapsible {
+    background-color: #495867;
+}
+#week9 .collapsible:hover {
+    background-color: #284b63;
+}
+
 
 
 h1 {
@@ -264,7 +275,19 @@ a {
 #stl{
     background-image: url("./images/stl.png");
 }
+#import{
+    background-image: url("./images/import.png");
+}
+#choosefile{
+    background-image: url("./images/choosefile.png");
+}
+#importsettings{
+    background-image: url("./images/importsettings.png");
+}
 
+#final_cookie{
+    background-image: url("./images/final_cookie.png");
+}
 
 .term {
     font-family: 'Consolas',monospace;
