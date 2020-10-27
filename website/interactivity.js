@@ -113,17 +113,37 @@ function lightOrDark(color) {
     hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b));
 
     return hsp > 127.5 ? 'light' : 'dark';
-  }
+}
+
+function clickHam(){
+	console.log("ham clciked");
+	mode = document.getElementById("navcircle").style.visibility;
+	console.log(mode);
+	if (mode == 'visible'){
+		document.getElementById("navcircle").style.visibility = 'hidden';
+	}
+	else {
+	document.getElementById("navcircle").style.visibility = 'visible';	
+	}
+	
+	
+}
 
 function setHeaderMode(mode) {
 	if (mode == "dark"){
-		for (var i=0; i < (document.querySelectorAll('a').length); i++){
-			(document.querySelectorAll('a')[i]).style.color = "rgb(235, 223, 188)";
+		for (var i=0; i < (document.querySelectorAll('.menu').length); i++){
+			(document.querySelectorAll('.menu')[i]).style.backgroundColor = "rgb(235, 223, 188)";
+			document.getElementById("ham").style.background = "#333447";
+			document.getElementById("sage").style.color = "rgb(235, 223, 188)";
+
 		}
 		 
 	} else if (mode =="light"){
-		for (var i=0; i < (document.querySelectorAll('a').length); i++){
-			(document.querySelectorAll('a')[i]).style.color = "#333447";
+		for (var i=0; i < (document.querySelectorAll('.menu').length); i++){
+			(document.querySelectorAll('.menu')[i]).style.backgroundColor = "#333447";
+			document.getElementById("ham").style.background = "rgb(235, 223, 188)";
+			document.getElementById("sage").style.color = "#333447";
+
 		}
 	}
 }
