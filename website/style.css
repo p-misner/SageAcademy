@@ -122,11 +122,14 @@ svg {
 	color: rgb(145, 13, 24);
 }
 #week5 * {
-	color: rgb(37, 71, 99);
+	color: #333447;
 }
 
 #week7 * {
 	color: rgb(235, 223, 188);
+}
+#week10 * {
+	color: rgb(0,0,0);
 }
 .spacer {
 	height: 400px;
@@ -175,6 +178,9 @@ COLORS FOR BODY BACKGROUND CHANGE
 }
 .nine {
 	background-color: #76949f;
+}
+.ten {
+	background-color: orange;
 }
 
 label .menu {
@@ -254,7 +260,7 @@ label input:checked + .menu + ul { opacity: 1; }
 label .nav-right2 {
   z-index: 200;
   position: fixed;
-  top: 200px;
+  top: 240px;
   right: 15vw;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

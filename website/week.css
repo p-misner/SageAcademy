@@ -64,7 +64,10 @@ body {
 #week9 .collapsible:hover {
     background-color: #284b63;
 }
+#week10 h1,#week10 h2,#week10 h3, #week10 {
+     color: orange;
 
+}
 
 
 h1 {
