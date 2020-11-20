@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Sage Academy</title>
+	
+	<link rel="stylesheet" href="../simple-grid.css">
+	<link rel="stylesheet" href="../week.css ">
+</head>
+<body>
+	<div  class="nav">
+		<a href="../../index.html"> Sage Academy</a>
+		<!-- <div class ="nav-right">
+			<a href="#week2"> Week 2</a>
+			<a  href="#week1"> Week 1</a>
+		</div> -->
+
+	</div>
+	<div id="week11" class="content">
+		<div class="title">
+			<h2> week 11 + week 12 </h2>
+			<h1> Animations </h1>
+		</div>
+
+
+
+
+
+
+		<div class="overview">
+			<div class="row">
+				<div class="col-5">
+					<h4> Materials </h4>
+					<ul>
+						<li> Laptop + Charger </li>
+						<li> Masks + Latex Gloves </li>
+						<li> Notebook </li> 
+						<li> Pens/ Pencils  </li>
+						<li> Elegoo Uno Super Kit </li>
+					</ul>
+				</div>
+				<div class="col-7" >
+					<h4 class="activity"> Goals </h4>
+					<p> The work continues on the mechanical flipbooks for both grades. For students who finish early, there is an extra credit opportunity to create a second animation using a thaumatrope or a zoetrope. </p>
+				</div>
+			</div>
+		</div>
+		<div class="proj">
+				<h3>Portfolios</h3>
+				<p> If you finish early, you can complete a page in your portfolio about the Mechanical Flipbook project according to the template page. <a href="https://sites.google.com/view/sageacademy-template/projects/mechanical-flipbook" target="_blank">This is the link to the template site</a></p>
+				
+				
+
+				<h3> Mechanical Flipbook</h3>
+				<p> Follow Priya's instructions in class. </p>
+				
+				<h3>Scratch</h3>
+				<p> Visit the  <a href="https://scratch.mit.edu/">scratch website</a> and fellow the tutorial. Everyone should make an animation featuring either:</p>
+				<ul>
+					<li>a conversation between at least two characters</li>
+					<li>a chase scene where one character is after the other</li>
+				</ul>
+				
+		</div>
+		
+		
+		
+
+
+		<div class="spacer"></div>
+
+		
+	</div>
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
+</body>
+</html>

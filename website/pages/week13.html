@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Sage Academy</title>
+	<link rel="stylesheet" href="../simple-grid.css">
+	<link href="./prism.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../week.css ">
+
+</head>
+<body>
+	<div  class="nav">
+		<a href="../../index.html"> Sage Academy</a>
+		<!-- <div class ="nav-right">
+			<a href="#week2"> Week 2</a>
+			<a  href="#week1"> Week 1</a>
+		</div> -->
+
+	</div>
+	<div id="week11" class="content">
+		<div class="title">
+			<h2> week 13 </h2>
+			<h1> Fruit Piano </h1>
+		</div>
+
+
+
+
+
+
+		<div class="overview">
+			<div class="row">
+				<div class="col-5">
+					<h4> Materials </h4>
+					<ul>
+						<li> Laptop + Charger </li>
+						<li> Masks + Latex Gloves </li>
+						<li> Notebook </li> 
+						<li> Pens/ Pencils  </li>
+						<li> Elegoo Uno Super Kit </li>
+					</ul>
+				</div>
+				<div class="col-7" >
+					<h4 class="activity"> Goals </h4>
+					<p> Students electro-musical journey's begin as they build their own custom piano using their Arduinos, some wires, a couple resistors and fruit. After creating their own instruments, they will have time to compose a song of their choice and then perform it to the group.  </p>
+					<p>An hour of class will also be set aside for students to finish their mechanical flipbooks and complete their portfolios.</p>
+				</div>
+			</div>
+		</div>
+		<div class="proj">
+				<h3>Fruit Piano</h3>
+				<h6>Background: Voltage Dividers</h6>
+				Follow Priya's instructions as she describes the intro game. By the end of the game and discussion, you should be able to explain what a voltage divider is (based on the picture below) and how we are using that to play a note with our fruit.
+				<div id="banana_piano" class="img"></div>
+				<h6>Necessary Electronics</h6>
+				<p>To complete the project, each student will use: </p>
+				<ul>
+					<li>1 Piezo Speaker</li>
+					<li>1 Arduino</li>
+					<li>1 Breadboard </li>
+					<li>1 9V battery and 1 9V battery to Arduino connector</li>
+					<li>Minimum of three 2kΩ ressitors </li>
+					<li>Wires</li>
+				</ul>
+
+				<h6>Single Fruit Circuit</h6>
+				<div class="row">
+					<div class="col-3"><h5> Breadboard Connections</h5></div>
+					<div class="col-9">
+						<p>1. Connect 5V pin on the Arduino to the long vertical red + row on your Breadboard </p>
+						<p>2. Connect GND pin on the Arduino to the long vertical blue - row on your Breadboard</p>
+						<div id="fruit_breadboard" class="img"></div>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3"><h5> Piezo Speaker Connections</h5></div>
+					<div class="col-9">
+						<p>1. Connect one pin on the Piezo Speaker to the 3 pin on the Arduino</p>
+						<p>2. Place the other pin on the Piezo Speaker in the long vertical - row in your Breadboard (ground).</p>
+						<div id="fruit_piezo" class="img"></div>
+
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3"><h5> Fruit Connections</h5></div>
+					<div class="col-9">
+						<p>1. Connect the A5 pin on the Arduino to on e of the short horizontal rows in the Breadboard</p>
+						<p>2. In the same horizontal row as before, use the 2kΩ resistor to connect the horizontal row to the long vertical + row (red) in the Breadboard </p>
+						<p>3. In the same horizontal row as before, place one end of the wire into the row and the other into a piece of fruit. </p>
+						<div id="fruit_connect" class="img"></div>
+
+						
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3"><h5> Tin Foil</h5></div>
+					<div class="col-9">
+						<p>1. Place a black wire in the long vertical - row in your Breadboard (ground). Do not connect it to anything</p>
+						<p>2. Wrap tin foil around the metal edge of the black wire</p>
+						<p>3. Tape the tinfoil (connected to the blackwire) to the table. </p>
+						<div id="fruit_black" class="img"></div>
+						
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3"><h5> Complete Circuit Picture</h5></div>
+					<div class="col-9">
+						
+						<div id="fruit_single" class="img"></div>
+						
+
+					</div>
+				</div>
+
+
+
+
+				<h6>Multi-Fruit Circuit</h6>
+				<p>This circuit is very similar to the Single Fruit circuit except for the fact you connect more fruit to more analog pins </p>
+				<div class="row">
+					<div class="col-3"><h5> Fruit Connections</h5></div>
+					<div class="col-9">
+						<p>1. Connect the [A4, A3, A2, A1, A0] pin on the Arduino to one of the short horizontal rows in the Breadboard</p>
+						<p>2. In the same horizontal row as before, use the 2kΩ resistor to connect the horizontal row to the long vertical + row (red) in the Breadboard </p>
+						<p>3. In the same horizontal row as before, place one end of the wire into the row and the other into a piece of fruit. </p>
+						
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3"><h5> Complete Circuit Picture</h5></div>
+					<div class="col-9">
+						
+						<div id="fruit_multi" class="img"></div>
+						
+
+					</div>
+				</div>
+				<h3>Code</h3>
+				<h6>Single Fruit + Single Note</h5>
+				<p>Make sure the fruit wire is plugged into pin A5 on the Arduino</p>
+<pre class="language-clike"><code>
+#define TONE_USE_INT
+#define TONE_PITCH 440
+#include <Pitch.h>
+
+const int buzzer = 3;
+
+void setup() {
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600)  ;
+}
+
+void loop() {
+   if (analogRead(A5) < 1022){
+     Serial.println("A");
+     tone(buzzer,NOTE_A4);    
+   } 
+   else {
+
+    noTone(buzzer);
+   }
+   delay(200);
+}
+</code></pre>
+			<h6>Multi Fruit + 6 Notes</h6>
+			<pre class="language-clike"><code>
+/*
+
+*/
+#define TONE_USE_INT
+#define TONE_PITCH 440
+#include <Pitch.h>
+
+
+const int buzzer = 3;
+// The melody array 
+
+
+void setup() {
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600)  ;
+}
+
+void loop() {
+ 
+   if (analogRead(A5) < 1022){
+     Serial.println("A");
+      tone(buzzer,NOTE_A4);
+    
+      
+   } 
+   else if(analogRead(A4) < 1022){
+      Serial.println("B");
+      tone(buzzer,NOTE_B4);
+   }
+    else if(analogRead(A3) < 1022){
+      Serial.println("C");
+      tone(buzzer,NOTE_C4);
+   }
+    else if(analogRead(A2) < 1022){
+      Serial.println("D");
+      tone(buzzer,NOTE_D4);
+   }
+    else if(analogRead(A1) < 1022){
+      Serial.println("E");
+      tone(buzzer,NOTE_E4);
+   }
+    else if(analogRead(A0) < 1022){
+      Serial.println("F");
+      tone(buzzer,NOTE_F4);
+   }
+   else {
+
+    noTone(buzzer);
+   }
+   delay(200);
+}
+			</code></pre>
+
+				<h3> Mechanical Flipbook</h3>
+				<h4>Flipbook Assembly</h4>
+				<p> Follow Priya's instructions in class.  </p>
+				<h4>Portfolios</h4>
+				<p> You can complete a page in your portfolio about the Mechanical Flipbook project according to the template page. <a href="https://sites.google.com/view/sageacademy-template/projects/mechanical-flipbook" target="_blank">This is the link to the template site</a>If you are completely done with the flipbook and the portfolio, you can either work on other homework or design another animation in  <a href="https://scratch.mit.edu/" target="_blank">Scratch</a> </p>
+				
+				
+				
+
+				
+				
+				
+		</div>
+		
+		
+		
+
+
+		<div class="spacer"></div>
+
+		
+	</div>
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
+		<script src="./prism.js"></script>
+
+</body>
+</html>

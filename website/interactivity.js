@@ -102,6 +102,18 @@ new ScrollMagic.Scene({
 			
 		}
 	});
+new ScrollMagic.Scene({
+	triggerElement: "#head11",
+	triggerHook: 0.8,
+	})
+	.setClassToggle("body","eleven")
+	.addTo(controller)
+	.on('progress', function(event){
+		if (event.progress > 0.05){
+			setHeaderMode(lightOrDark(window.getComputedStyle(document.body).backgroundColor))
+			
+		}
+	});
 
 
 
@@ -128,9 +140,9 @@ function lightOrDark(color) {
 }
 
 function clickHam(){
-	console.log("ham clciked");
+	// console.log("ham clicked");
 	mode = document.getElementById("navcircle").style.visibility;
-	console.log(mode);
+	// console.log(mode);
 	if (mode == 'visible'){
 		document.getElementById("navcircle").style.visibility = 'hidden';
 	}

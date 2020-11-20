@@ -68,6 +68,12 @@ body {
      color: orange;
 
 }
+#week11 h1,#week11 h2,#week11 h3, #week11 {
+     color: #a5c466
+;
+
+}
+
 
 
 h1 {
@@ -291,7 +297,27 @@ a {
 #final_cookie{
     background-image: url("./images/final_cookie.png");
 }
-
+#banana_piano{
+    background-image: url("./images/banana-piano.png");
+}
+#fruit_breadboard{
+    background-image: url("./images/fruit_breadboard.png");
+}
+#fruit_piezo{
+    background-image: url("./images/fruit_piezo.png");
+}
+#fruit_connect{
+    background-image: url("./images/fruit_connect.png");
+}
+#fruit_black{
+    background-image: url("./images/fruit_black.png");
+}
+#fruit_single{
+    background-image: url("./images/fruit_single.png");
+}
+#fruit_multi{
+    background-image: url("./images/fruit_multi.png");
+}
 .term {
     font-family: 'Consolas',monospace;
     background-color: rgb(235, 235, 235);
@@ -347,6 +373,9 @@ button:hover {
 }
 .buttons {
     max-width: 250px;
+}
+.col-5 ul li {
+    margin-left: 10px;
 }
 
 
